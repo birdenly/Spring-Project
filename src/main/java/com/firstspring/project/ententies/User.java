@@ -2,9 +2,19 @@ package com.firstspring.project.ententies;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity//Indicate that it is a ententy for the DB
+@Table(name = "tb_user") //necessary as h2 already has  User table by default
 public class User implements Serializable{
 
     private static final long serialVersionUID = 1L;
+    @Id //primary key for this DB
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto increment
     private Long id;
     private String name;
     private String email;
