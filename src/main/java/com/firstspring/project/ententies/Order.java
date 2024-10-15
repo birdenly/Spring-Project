@@ -3,6 +3,8 @@ package com.firstspring.project.ententies;
 import java.io.Serializable;
 import java.time.Instant;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,8 +20,9 @@ public class Order implements Serializable{
     @Id //primary key for this DB
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto increment
     private Long id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'",timezone = "GMT")
     private Instant moment;
-    @ManyToOne
+    @ManyToOne //many orders to 1 client
     @JoinColumn(name = "client_id")//foreign key for the DB
     private User client;
 
