@@ -1,7 +1,7 @@
 package com.firstspring.project.entities.enums;
 
 public enum OrderStatus {
-
+        //add code for future proof and use
         WAITING_PAYMENT(1),
         PAID(2),
         SHIPPED(3),

@@ -8,14 +8,16 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+import com.firstspring.project.entities.Category;
 import com.firstspring.project.entities.Order;
 import com.firstspring.project.entities.User;
 import com.firstspring.project.entities.enums.OrderStatus;
+import com.firstspring.project.repositories.CategoryRepository;
 import com.firstspring.project.repositories.OrderRepository;
 import com.firstspring.project.repositories.UserRepository;
 
 @Configuration
-@Profile("test") //same name as in application-test.properties
+@Profile("test") //same name as in application.properties uses application-test.properties
 public class TestConfig implements CommandLineRunner {
 
     @Autowired //auto instance creation
@@ -24,8 +26,19 @@ public class TestConfig implements CommandLineRunner {
     @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
+    private CategoryRepository categoryRepository;
+
     @Override
     public void run(String... args) throws Exception {
+
+        
+        Category cat1 = new Category(null, "Electronics");
+        Category cat2 = new Category(null, "Books");
+        Category cat3 = new Category(null, "Computers"); 
+
+        categoryRepository.saveAll(Arrays.asList(cat1,cat2,cat3));
+        
         User u1 = new User(null, "Maria Brown", "maria@gmail.com", "988888888", "123456");
         User u2 = new User(null, "Alex Green", "alex@gmail.com", "977777777", "123456");
 
