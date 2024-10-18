@@ -8,8 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.firstspring.project.ententies.Order;
-import com.firstspring.project.ententies.User;
+import com.firstspring.project.entities.Order;
+import com.firstspring.project.entities.User;
 import com.firstspring.project.repositories.OrderRepository;
 import com.firstspring.project.repositories.UserRepository;
 

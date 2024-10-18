@@ -1,4 +1,4 @@
-package com.firstspring.project.ententies;
+package com.firstspring.project.entities;
 
 import java.io.Serializable;
 import java.time.Instant;

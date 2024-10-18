@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.firstspring.project.ententies.User;
+import com.firstspring.project.entities.User;
 import com.firstspring.project.repositories.UserRepository;
 
 @Service
