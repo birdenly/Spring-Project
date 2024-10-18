@@ -26,7 +26,7 @@ public class User implements Serializable{
     private String phone;
     private String password;
 
-    @JsonIgnore //exclude this from the json output, else infinity loop
+    @JsonIgnore //exclude this from the json output, else infinity loop. choose a class where you dont want to see the output. ex: we only want to see the clients in the json, to see their orders we go to the orders route.
     @OneToMany(mappedBy = "client")//atribbute name on the order class // 1 client to many orders
     private List<Order> orders =  new ArrayList<>();
 
