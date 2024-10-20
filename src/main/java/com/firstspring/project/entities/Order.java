@@ -35,7 +35,7 @@ public class Order implements Serializable{
 
     private Integer orderStatus;
 
-    @OneToMany(mappedBy = "id.order")
+    @OneToMany(mappedBy = "id.order") //id.order = OrderItem has *OrderItemPK id* inside OrderItemPK it has order, so id.order
     private Set<OrderItem> items = new HashSet<>();
 
     public Order() {
