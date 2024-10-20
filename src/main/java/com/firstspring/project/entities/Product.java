@@ -30,6 +30,7 @@ public class Product implements Serializable{
     //Already instanced so it doesnt start as null but as empty
     @ManyToMany
     @JoinTable(name = "tb_product_category", 
+    //both of these will be created on the above table, product_id will take the ID of the current instance. the set of categories will have a category_id for each category
     joinColumns = @JoinColumn(name = "product_id"), //foreign key of product
     inverseJoinColumns = @JoinColumn(name = "category_id") //foreign key of category
     )
