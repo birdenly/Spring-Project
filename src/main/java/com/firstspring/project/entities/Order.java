@@ -22,7 +22,7 @@ import jakarta.persistence.Table;
 @Table(name = "tb_order")
 public class Order implements Serializable{
 
-    private static Long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     @Id //primary key for this DB
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto increment

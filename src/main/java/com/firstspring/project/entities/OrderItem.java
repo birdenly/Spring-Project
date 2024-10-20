@@ -11,7 +11,8 @@ import jakarta.persistence.Table;
 @Table(name = "tb_order_item")
 public class OrderItem implements Serializable{
 
-    private static Long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
+    
     @EmbeddedId
     private OrderItemPK id = new OrderItemPK();
     private Integer quantity;
