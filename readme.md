@@ -125,4 +125,23 @@ The generated JAR file will be located in the `target` directory, for me it was 
 ```sh
 java -jar target/your-jar-file.jar
 ```
-Examples returned by the API using Postman:
+### Examples returned by the API using Postman:
+- GET /order/1
+
+<img src="Screenshots/Order.png" alt="order" width="300
+" height="500"/>
+
+- GET /users
+
+<img src="Screenshots/users.png" alt="users" width="200
+" height="200"/>
+
+- GET /categories
+
+<img src="Screenshots/categories.png" alt="categories" width="200
+" height="200"/>
+
+- GET /categories/2
+
+<img src="Screenshots/product.png" alt="product" width="300
+" height="200"/>
