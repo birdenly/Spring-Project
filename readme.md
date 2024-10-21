@@ -69,27 +69,12 @@ This project is a Spring Boot application designed to manage various entities su
     ```
 
 ## Project Structure
+### From: https://www.udemy.com/course/java-curso-completo
 
-```plaintext
-src/
-├── main/
-│   ├── java/
-│   │   └── com/firstspring/project/
-│   │       ├── config/
-│   │       ├── entities/
-│   │       ├── repositories/
-│   │       ├── resources/
-│   │       ├── services/
-│   │       └── ProjectApplication.java
-│   └── resources/
-│       ├── application-test.properties
-│       └── application.properties
-│
-└── .mvn/
-    └── wrapper/
-        └── maven-wrapper.properties
-```
-
+<img src="Screenshots/model.png" alt="model" width="700
+" height="300"/>
+<img src="Screenshots/instance.png" alt="instance" width="700
+" height="400"/>
 ## Endpoints
 
 ### User Resource
